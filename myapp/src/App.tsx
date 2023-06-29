@@ -1,4 +1,4 @@
-import { Alert } from './Alert';
+ import { Alert } from './Alert';
 import { PersonScore } from './PersonScore';
 
 function App() {
@@ -8,4 +8,19 @@ function App() {
     </div>
   );
 }
-export default App;
+export default App; 
+
+/////////////////
+
+/*
+ import { SomeComponent } from "./SomeComponent";
+
+function App() {
+  return (
+    <div className="App">
+     <SomeComponent />
+    </div>
+  );
+}
+export default App;  
+*/
