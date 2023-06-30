@@ -1,0 +1,51 @@
+body {
+  background-color: green;
+}
+
+.container {
+  diplay: inline-flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.container.warning {
+  color: #e7650f;
+  background-color: tomato;
+}
+
+.container.information {
+  color: #118da0;
+  background-color: teal;
+}
+
+.header {
+  dspaly: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.headerIcon {
+  width: 30px;
+}
+
+.headerText {
+  font-weight: bold;
+}
+
+.closeButton {
+  border: none;
+  background: transparent;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.content {
+  margin-left: 30px;
+  color: #000;
+}
+
+.redundant {
+  color: red;
+}
