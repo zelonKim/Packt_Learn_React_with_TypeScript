@@ -12,7 +12,7 @@ body {
 
 .container.warning {
   color: #e7650f;
-  background-color: tomato;
+  background-color: "tomato";
 }
 
 .container.information {
