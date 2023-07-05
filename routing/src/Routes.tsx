@@ -6,6 +6,7 @@ import { CustomerHistory } from "./pages/CustomerHistory";
 import { CustomerProfile } from "./pages/CustomerProfile";
 import { CustomerTasks } from "./pages/CustomerTasks";
 import { ErrorPage } from "./pages/ErrorPage";
+import { HomePage } from "./pages/HomePage";
 import { Products } from "./pages/Products";
 import { ProductsPage } from "./pages/ProductsPage";
 
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
       {
         path: "products",
         element: <Products />,
