@@ -76,7 +76,7 @@ export function Header() {
 
 ///////////////////////
 
-import { FormEvent } from "react";
+
 import { NavLink, Link, useSearchParams, Form } from "react-router-dom";
 import logo from "./logo.svg";
 
@@ -113,6 +113,18 @@ export function Header() {
           }
         >
           Products
+        </NavLink>
+
+        <div></div>
+        
+        <NavLink
+          to="admin"
+          className={({ isActive }) => 
+            `text-white no-underline p-1 pb-0.5 border-solid border-b-2 
+            ${isActive ? "border-white" : "border-transparent"}`
+          } 
+          >
+            Admin
         </NavLink>
       </nav>
     </header>

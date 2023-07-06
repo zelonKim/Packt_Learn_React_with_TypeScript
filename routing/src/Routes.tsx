@@ -56,7 +56,7 @@ export function Routes() {
 
 //////////////////////
 
-const router = createBrowserRouter([
+/* const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
@@ -80,4 +80,39 @@ const router = createBrowserRouter([
 
 export function Routes() {
   return <RouterProvider router={router} />;
+} */
+
+
+////////////////////
+
+
+import {lazy, Suspense} from 'react'
+
+const AdminPage = lazy( () => import('./pages/AdminPage'))
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: 'admin',
+        element: (
+          <Suspense
+            fallback={
+              <div className="p-5 text-xl text-center text-slate-100">
+                Loading...
+              </div>
+            }>
+              <AdminPage />
+          </Suspense>
+        )
+      }
+    ]
+  }
+])
+
+export function Routes() {
+  return <RouterProvider router={router} />
 }
