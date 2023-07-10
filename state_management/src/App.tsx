@@ -89,6 +89,7 @@ export default App;
 /////////////////////////
 
 import { useReducer } from 'react'
+import { Provider } from 'react-redux';
 import { authenticate, User } from './api/authenticate';
 import { authorize } from './api/authorize';
 import { AppProvider } from './AppContext';
@@ -120,6 +121,7 @@ type Action = {
   { type: "authorized",
     permissions: string[]
   }
+
 
 function reducer(state: State, action: Action): State {
   switch (action.type) {
@@ -167,10 +169,10 @@ function App() {
   
   return (
     <div>
-      <AppProvider>
+      <Provider store={store}>
           <Header />
           <Main />
-      </AppProvider>
+      </Provider>
     </div>
   );
 }

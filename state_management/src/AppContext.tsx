@@ -28,6 +28,8 @@ type Action = {
       permissions: string[]
     }
   
+
+    
   function reducer(state: State, action: Action): State {
     switch (action.type) {
       case "authenticate":
