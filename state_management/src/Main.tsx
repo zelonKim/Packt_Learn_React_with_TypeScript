@@ -31,6 +31,7 @@ export function Main() {
     const user = useSelector(
         (state: RootState) => state.user.user
     )
+    
     return(
         <main>
             <h1>Welcome</h1>

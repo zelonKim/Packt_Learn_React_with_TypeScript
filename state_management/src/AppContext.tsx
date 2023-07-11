@@ -1,6 +1,7 @@
 import { createContext, useContext, useReducer, ReactNode } from 'react'
 import { User } from './api/authenticate'
 
+/* 
 type State = {
     user: undefined | User,
     permissions: undefined | string[],
@@ -75,4 +76,5 @@ type Action = {
     )
   }
 
-  export const useAppContext = () => useContext(AppContext)
+  export const useAppContext = () => useContext(AppContext) 
+  */

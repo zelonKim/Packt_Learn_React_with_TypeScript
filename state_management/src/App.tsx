@@ -88,11 +88,11 @@ export default App;
 
 /////////////////////////
 
-import { useReducer } from 'react'
 import { Provider } from 'react-redux';
+import { store } from './store/store'
+import { useReducer } from 'react'
 import { authenticate, User } from './api/authenticate';
 import { authorize } from './api/authorize';
-import { AppProvider } from './AppContext';
 import { Header } from './Header';
 import { Main } from './Main';
 
@@ -107,7 +107,6 @@ const initialState: State = {
   permissions: undefined,
   loading: false,
 }
-
 
 
 type Action = {
@@ -141,7 +140,6 @@ function reducer(state: State, action: Action): State {
     return state;
   }
 }
-
 
 
 function App() {
