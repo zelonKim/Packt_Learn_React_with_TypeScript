@@ -20,6 +20,7 @@ export async function getPosts() {
 
     const body = (await response.json()) as unknown;
     assertIsPosts(body)
+    
     return body;    
 }
 
