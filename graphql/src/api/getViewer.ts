@@ -1,3 +1,4 @@
+/* 
 import { GetViewerResponse, ViewerData } from './types'
 
 export const GET_VIEWER_QUERY = `
@@ -57,4 +58,20 @@ export async function getViewer() {
     assertIsGetViewerResponse(body);
 
     return body.data
-}
+} 
+*/
+
+//////////////////////////
+
+import { gql } from "@apollo/client";
+
+export const GET_VIEWER_QUERY = gql`
+     query {
+        viewer {
+            name
+            avatarUrl
+        }
+     }
+`;
+
+
