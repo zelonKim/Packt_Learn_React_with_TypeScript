@@ -6,13 +6,18 @@ type Params = {
   checkedIds?: IdValue[];
   onCheckedIdsChange?: (checkedIds: IdValue[]) => void;
 };
+
+
+
 export function useChecked({ checkedIds, onCheckedIdsChange }: Params) {
+
   const [resolvedCheckedIds, setResolvedCheckedIds] = useState<IdValue[]>(
     checkedIds || []
   );
 
   const handleCheckChange = (checkedId: IdValue) => () => {
     const newCheckedIds = getNewCheckedIds(resolvedCheckedIds, checkedId);
+    
     if (onCheckedIdsChange) {
       onCheckedIdsChange(newCheckedIds);
     } else {
